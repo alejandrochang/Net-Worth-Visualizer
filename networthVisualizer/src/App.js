@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import * as d3 from "d3";
 import PieSvg from "./PieSvg";
-
 import "./styles.css";
 
-function App() {
+const App = () => {
   const generateData = (value, length = 5) =>
     d3.range(length).map((item, index) => ({
       date: index,
-      value: value === null || value === undefined ? Math.floor(Math.random() * 100) : value
+      value: value === null || value === undefined ? Math.trunc(Math.random() * 100) : value
     }));
+
 
   const [data, setData] = useState(generateData(0));
   const changeData = () => {
@@ -23,11 +23,15 @@ function App() {
     [!data]
   );
 
+  console.log({ data });
+
   return (
     <div className="App">
+    <div>
+      <span className="label">Networth Tracker</span>
+    </div>
       <div>
         <button onClick={changeData}>Transform</button>
-        <span className="label">Networth Tracker</span>
       </div>
       <div>
         <PieSvg
@@ -43,3 +47,12 @@ function App() {
 }
 
 export default App;
+
+// Data shape:
+// data: Array(5)
+// 0: {date: 0, value: 74}
+// 1: {date: 1, value: 95}
+// 2: {date: 2, value: 52}
+// 3: {date: 3, value: 60}
+// 4: {date: 4, value: 74}
+
