@@ -16,14 +16,18 @@ const App = () => {
     setData(generateData());
   };
 
+  // const newData = [
+  //   {assets: 0, value: 25},
+  //   {liablities: 1, value: 95},
+  //   {investments: 2, value: 52},
+  // ]
+
   useEffect(
     () => {
       setData(generateData());
     },
     [!data]
   );
-
-  console.log({ data });
 
   return (
     <div className="App">
