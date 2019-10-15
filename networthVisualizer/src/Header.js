@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
+import CalculatorLogo from './img/logo1.jpg';
 
-const s = {
+
+// const s = {
   
-}
+// }
 
 const Header = (props) => {
   return (
-    <div style={{ width: '100%', height: '50px', boxSizing: 'borderBox', display: 'flex', backgroundColor: 'rgb(80, 91, 113)', boxShadow: '0px 0px 1px #6f8585'}}>
+    <div className="header">
       <div style={{ marginLeft: '25px', padding: '10px', fontSize: '25px', fontFamily: 'Caveat', color: '#ffff' }}>
         Net-Calculcator
       </div>
       <div>
-
+        <img src={CalculatorLogo} alt='Girl in a jacket' width='45' height='45' style={{ marginRight: '20px' }} />
       </div>
     </div>
   );

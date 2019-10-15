@@ -11,3 +11,12 @@ span {
   display: inline-block;
   width: 120px;
 }
+
+.header {
+  width: 100%;
+  justify-content: space-between;
+  height: 50px;
+  display: flex;
+  background-color: rgb(80, 91, 113);
+  box-shadow: rgb(111, 133, 133) 0px 0px 1px;
+}
