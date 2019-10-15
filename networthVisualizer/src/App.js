@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
-import * as d3 from "d3";
-import PieSvg from "./PieSvg";
-import "./styles.css";
+import React, { useState, useEffect } from 'react';
+import * as d3 from 'd3';
+
+import PieSvg from './PieSvg';
+import Header from './Header';
+
+import './styles.css';
 
 const App = () => {
   const generateData = (value, length = 5) =>
@@ -30,9 +33,10 @@ const App = () => {
   );
 
   return (
-    <div className="App">
+    <div className='App' style={{ background: '#fff' }}>
+    <Header />
     <div>
-      <span className="label">Networth Tracker</span>
+      <span className='label'>Networth Tracker</span>
     </div>
       <div>
         <button onClick={changeData}>Transform</button>
