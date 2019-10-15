@@ -35,13 +35,10 @@ const App = () => {
   return (
     <div className='App' style={{ background: '#fff' }}>
     <Header />
-    <div>
-      <span className='label'>Networth Tracker</span>
-    </div>
-      <div>
+      <div style={{ marginTop: '20px'}}>
         <button onClick={changeData}>Transform</button>
       </div>
-      <div>
+      <div style={{ marginTop: '20px'}}>
         <PieSvg
           data={data}
           width={700}
