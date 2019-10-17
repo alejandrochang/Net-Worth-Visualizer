@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 
 import PieSvg from './PieSvg';
 import Header from './Header';
+import Navigation from './Navigation';
 
 import './styles.css';
 
@@ -21,9 +22,7 @@ const App = () => {
 
 
   const [data, setData] = useState(generateData(0));
-  const changeData = () => {
-    setData(generateData());
-  };
+  const changeData = () => { setData(generateData()) };
 
   // const newData = [
   //   {assets: 0, value: 25},
@@ -31,18 +30,17 @@ const App = () => {
   //   {investments: 2, value: 52},
   // ]
 
-  useEffect(
-    () => {
-      setData(generateData());
-    },
-    [!data]
-  );
+  useEffect(() => {setData(generateData())}, [!data]);
 
   return (
     <div className='App' style={{ background: '#fff' }}>
-    <Header />
+      <Navigation />
+      {/* <Header /> */}
       <div style={s.top}>
-        <button onClick={changeData}>Transform</button>
+        <button
+          onClick={changeData}>
+          Transform
+      </button>
       </div>
       <div style={s.top}>
         <PieSvg

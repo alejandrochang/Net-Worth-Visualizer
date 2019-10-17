@@ -30,7 +30,6 @@ const Header = (props) => {
       <div style={s.leftHeader}>
         Net-Calculcator
       </div>
-      {/* <div> */}
         <img
           src={CalculatorLogo}
           alt='Calculator' 
@@ -38,7 +37,6 @@ const Header = (props) => {
           height='45'
           style={s.img}
         />
-      {/* </div> */}
     </div>
   );
 }
