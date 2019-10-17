@@ -3,14 +3,6 @@ import CalculatorLogo from './img/logo1.jpg';
 
 
 const s = {
-  mainHeader: {
-    width: '100%',
-    justifyContent: 'space-between',
-    height: '50px',
-    display: 'flex',
-    backgroundColor: 'rgb(38, 40, 60)',
-    boxShadow: 'rgb(111, 133, 133) 0px 0px 1px',
-  },
   leftHeader: {
     marginLeft: '225px',
     padding: '10px',
@@ -26,7 +18,7 @@ const s = {
 
 const Header = (props) => {
   return (
-    <div style={s.mainHeader}>
+    <div>
       <div style={s.leftHeader}>
         Net-Calculcator
       </div>
