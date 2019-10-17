@@ -6,6 +6,12 @@ import Header from './Header';
 
 import './styles.css';
 
+const s = {
+  top: {
+    marginTop: '20px',
+  },
+}
+
 const App = () => {
   const generateData = (value, length = 5) =>
     d3.range(length).map((item, index) => ({
@@ -35,10 +41,10 @@ const App = () => {
   return (
     <div className='App' style={{ background: '#fff' }}>
     <Header />
-      <div style={{ marginTop: '20px'}}>
+      <div style={s.top}>
         <button onClick={changeData}>Transform</button>
       </div>
-      <div style={{ marginTop: '20px'}}>
+      <div style={s.top}>
         <PieSvg
           data={data}
           width={700}
