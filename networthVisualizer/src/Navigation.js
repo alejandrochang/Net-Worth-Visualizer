@@ -18,9 +18,11 @@ import './styles.css';
 //   }
 // };
 
+const handleClick = () => console.log('clicked icon');
+
 const Navigation = (props) => {
   return (
-    <div class="topnav" id="myTopnav">
+    <div className="topnav" id="myTopnav">
       {/* <span style={s.leftHeader}>Net-Calculcator</span>
       <img
         src={CalculatorLogo}
@@ -31,9 +33,9 @@ const Navigation = (props) => {
       /> */}
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="#home" class="active">Home</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
+      <a href="#home" className="active">Home</a>
+      <a href="javascript:void(0);" className="icon" onClick={handleClick()}>
+        <i className="fa fa-bars"></i>
       </a>
     </div>
   );
